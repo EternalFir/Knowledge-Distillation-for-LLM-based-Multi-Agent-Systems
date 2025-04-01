@@ -1,0 +1,5 @@
+py4j
+openai==1.65.4
+litellm==1.46.2
+transformers==4.46.3
+torch==2.4.1

@@ -1,0 +1,52 @@
+evaluation: ["Yes", "Good job!"]
+sub_tasks
+{'order': 1, 'sub-task': 'Pour blue paint from the wood cup into the empty bowl on the table.'}
+{'order': 2, 'sub-task': 'Pour yellow paint from the wood cup into the bowl containing blue paint.'}
+{'order': 3, 'sub-task': 'Mix the blue and yellow paints in the bowl thoroughly to create green paint.'}
+{'order': 4, 'sub-task': 'Focus on the green paint in the bowl as the final product.'}
+areas: ['pouring', 'mixing', 'observation']
+find area
+observation
+mixing
+pouring
+['observation', 'mixing', 'pouring']
+["agent2","agent2","agent1","agent0"]
+i:  0
+sub_task:  {'order': 1, 'sub-task': 'Pour blue paint from the wood cup into the empty bowl on the table.'}
+response:  pour OBJ in OBJ  
+cup containing blue paint  
+bowl  
+
+**Action:**  
+pour cup containing blue paint in bowl
+env_response:  No known action matches that input.
+reward:  0
+response:  pick up cup containing blue paint
+env_response:  You move the wood cup to the inventory.
+reward:  20
+response:  pour cup containing blue paint in bowl
+env_response:  You pour the contents of the wood cup into the bowl.
+reward:  0
+response:  I'm done. Poured blue paint from the wood cup into the empty bowl on the table.
+i:  1
+sub_task:  {'order': 2, 'sub-task': 'Pour yellow paint from the wood cup into the bowl containing blue paint.'}
+response:  pick up cup containing yellow paint
+env_response:  You move the wood cup to the inventory.
+reward:  0
+response:  pour cup containing yellow paint in bowl
+env_response:  You pour the contents of the wood cup into the bowl.
+reward:  10
+response:  I'm done. Poured yellow paint from the wood cup into the bowl containing blue paint.
+i:  2
+sub_task:  {'order': 3, 'sub-task': 'Mix the blue and yellow paints in the bowl thoroughly to create green paint.'}
+response:  mix bowl
+env_response:  Blue and yellow paint mix to produce green paint.
+reward:  10
+response:  I'm done. I mixed the blue and yellow paints in the bowl thoroughly to create green paint.
+i:  3
+sub_task:  {'order': 4, 'sub-task': 'Focus on the green paint in the bowl as the final product.'}
+response:  focus on green paint
+env_response:  You focus on the green paint.
+reward:  60
+response:  I'm done. Focused on the green paint in the bowl, which was the final product created by mixing blue and yellow paints.
+total_reward:  100

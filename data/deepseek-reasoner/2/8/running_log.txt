@@ -1,0 +1,106 @@
+evaluation: ["Yes", "Good job!"]
+sub_tasks
+{'order': 1, 'sub-task': 'Open the closed door to the kitchen to access potential ingredients.'}
+{'order': 2, 'sub-task': "Go to the kitchen to search for the 'salt' ingredient required for the mixture."}
+{'order': 3, 'sub-task': 'Retrieve salt from the kitchen and bring it back to the bathroom.'}
+{'order': 4, 'sub-task': 'Collect water from the toilet using the empty glass cup as a container.'}
+{'order': 5, 'sub-task': 'Add the retrieved salt into the glass cup containing water.'}
+{'order': 6, 'sub-task': 'Stir the mixture in the glass cup to fully dissolve the salt, forming salt water.'}
+{'order': 7, 'sub-task': 'Focus directly on the resulting salt water (substance) in the glass cup to finalize the task.'}
+areas: ['navigation', 'retrieval', 'preparation']
+find area
+retrieval
+navigation
+preparation
+['retrieval', 'navigation', 'preparation']
+["agent1","agent1","agent0","agent0","agent2","agent2","agent2"]
+i:  0
+sub_task:  {'order': 1, 'sub-task': 'Open the closed door to the kitchen to access potential ingredients.'}
+response:  open door
+env_response:  The door is now open.
+reward:  8
+response:  I'm done. The closed door to the kitchen has been successfully opened.
+i:  1
+sub_task:  {'order': 2, 'sub-task': "Go to the kitchen to search for the 'salt' ingredient required for the mixture."}
+response:  go kitchen
+env_response:  You move to the kitchen.
+reward:  17
+response:  look around
+env_response:  This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is closed)
+	A door to the outside (that is closed)
+reward:  0
+response:  pick up glass jar
+env_response:  You move the glass jar to the inventory.
+reward:  0
+response:  I'm done. The 'salt' ingredient (sodium chloride in the glass jar) has been found and acquired in the kitchen.
+i:  2
+sub_task:  {'order': 3, 'sub-task': 'Retrieve salt from the kitchen and bring it back to the bathroom.'}
+response:  move salt to bathroom
+env_response:  No known action matches that input.
+reward:  0
+response:  go bathroom
+env_response:  You move to the bathroom.
+reward:  0
+response:  I'm done. Retrieved the salt from the kitchen and successfully brought it to the bathroom.
+i:  3
+sub_task:  {'order': 4, 'sub-task': 'Collect water from the toilet using the empty glass cup as a container.'}
+response:  dunk cup in toilet
+env_response:  You dunk the glass cup in the toilet, moving the liquids (water) to the glass cup.
+reward:  0
+response:  I'm done. Collected water from the toilet using the empty glass cup as a container.
+i:  4
+sub_task:  {'order': 5, 'sub-task': 'Add the retrieved salt into the glass cup containing water.'}
+response:  pour salt in cup
+env_response:  No known action matches that input.
+reward:  0
+response:  mix substance in cup
+env_response:  That container is empty, so there are no items to mix.
+reward:  0
+response:  inventory
+env_response:  In your inventory, you see:
+	a glass jar (containing a substance called sodium chloride)
+	an orange
+reward:  0
+response:  pour glass jar in cup
+env_response:  The glass jar can't be poured out, because it's not open.
+reward:  0
+response:  open glass jar
+env_response:  The glass jar is now open.
+reward:  0
+response:  pour glass jar in cup
+env_response:  You pour the contents of the glass jar into the glass cup.
+reward:  8
+response:  I'm done. Added the salt from the glass jar into the glass cup containing water by opening the jar and pouring its contents into the cup.
+i:  5
+sub_task:  {'order': 6, 'sub-task': 'Stir the mixture in the glass cup to fully dissolve the salt, forming salt water.'}
+response:  mix cup
+env_response:  Sodium chloride and water mix to produce salt water.
+reward:  9
+response:  I'm done. Stirred the mixture in the glass cup by mixing it, resulting in fully dissolved salt to form salt water.
+i:  6
+sub_task:  {'order': 7, 'sub-task': 'Focus directly on the resulting salt water (substance) in the glass cup to finalize the task.'}
+response:  focus on salt water
+env_response:  You focus on the salt water.
+reward:  58
+response:  I'm done. Focused on the salt water in the glass cup to finalize the task, ensuring the mixture is properly recognized.
+total_reward:  100
