@@ -22,9 +22,9 @@ def SingleTaskGen(args):
     taskNames = env.get_task_names()
     task_name = taskNames[args.task_ID]
 
-    output_dir = "./data/" + args.model_name + "/task_" + str(args.task_ID) + "/var_" + str(args.var_id) + "/"+str(args.episode_id)+"/"
+    output_dir = "./data/api_logs/" + args.model_name + "/task_" + str(args.task_ID) + "/var_" + str(args.var_id) + "/"+str(args.episode_id)+"/"
     if os.path.islink(output_dir):
-        print(f"⚠️  {output_dir} 是一个符号链接，指向 {os.readlink(output_dir)}")
+        print(f" {output_dir} 是一个符号链接，指向 {os.readlink(output_dir)}")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir,exist_ok=True)
     summary_name = output_dir + "running_log.txt"
@@ -37,6 +37,9 @@ def SingleTaskGen(args):
     total_reward = 0
     env.load(task_name, args.var_id, "", generateGoldPath=True)
     print(env.get_task_description())
+    # print(env.look())
+    # exit(0)
+
     print(env.get_gold_action_sequence())
     # observation=env.look()
     # print("look: " + str(observation))
